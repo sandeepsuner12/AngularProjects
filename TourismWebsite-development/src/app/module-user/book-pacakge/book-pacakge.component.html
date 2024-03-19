@@ -1,0 +1,93 @@
+<!-- <div class="container d-flex justify-content-center m-5">
+    <div class="d-flex flex-column p-5 border rounded" style="background-color: rgb(106, 159, 167)">
+      <h3 class="mb-4">Confirm Your Travel Booking Here!</h3>
+      <div *ngIf="pacakgeForBooking" class="container">
+        <h5>Booking Customer : </h5>
+        <h5>Package : {{pacakgeForBooking.location}}</h5>
+        <h5>Start Date : <input type="date"></h5>
+        <h5>Durations : {{pacakgeForBooking.numberofDays}} days</h5>
+  
+        <form [formGroup]="bookingForm">
+          <label for="ticketsNumber"><strong>Number of Passes:</strong></label>
+          <select
+            type="text"
+            class="form-control"
+            placeholder="Select Number of Tickets"
+            name="ticketsNumber"
+            formControlName="ticketsNumber"
+          >
+            <option *ngFor="let i of ticketOptions" [value]="i">{{ i }}</option>
+          </select>
+  
+          <div class="form-check m-3">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="paymentConfirmation"
+              name="paymentConfirmation"
+              formControlName="paymentConfirmation"
+            />
+            <label class="form-check-label" for="paymentConfirmation">
+              <strong class="ml-2">I acknowledge that the payment has been successfully completed.</strong>
+            </label>
+          </div>
+  
+          <a routerLink="/successPage" class="confirmBooking">Confirm Booking</a>
+        </form>
+      </div>
+    </div>
+  </div>
+   -->
+
+   <div class="container-item d-flex justify-content-center">
+    <div class="d-flex flex-column p-5 border rounded m-5" style="background-color: rgb(106, 159, 167)">
+      <h3 class="mb-4">Confirm Your Travel Booking Here!</h3>
+      <div class="container">
+        <h5>Booking Customer : {{username}}</h5>
+          <h5>Package : {{pacakgeForBooking.location}}</h5>
+        <!-- <h5>Start Date:</h5> -->
+        <h5>Trip Duration: {{pacakgeForBooking.numberofDays}} days</h5>
+  
+        <form [formGroup]="bookingForm">
+          <label for="startDate" class="form-label"
+          ><strong>Start Date:</strong></label
+        >
+        <input
+          type="Date"
+          class="form-control"
+          formControlName="startDate"
+          id="startDate"
+          placeholder="Select Date"
+          name="startDate"
+        />
+  
+  
+          <label for="ticketsNumber"><strong>Number of Passes:</strong></label>
+          <select
+            type="text"
+            class="form-control"
+            placeholder="Select Number of Tickets"
+            name="ticketsNumber"
+            formControlName="ticketsNumber"
+          >
+            <option *ngFor="let i of ticketOptions" [value]="i">{{ i }}</option>
+          </select>
+  
+          <div class="form-check m-3">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="paymentConfirmation"
+              name="paymentConfirmation"
+              formControlName="paymentConfirmation"
+            />
+            <label class="form-check-label" for="paymentConfirmation">
+              <strong class="ml-2">I acknowledge that the payment has been successfully completed.</strong>
+            </label>
+          </div>
+  
+          <a class="confirmBooking" (click)="handleClick()">Confirm Booking</a>
+        </form>
+      </div>
+    </div>
+  </div>

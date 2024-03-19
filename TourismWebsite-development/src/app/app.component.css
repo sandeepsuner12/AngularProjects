@@ -1,0 +1,92 @@
+@import '~@fortawesome/fontawesome-free/css/all.css';
+
+body {
+    font-family: "Open Sans", sans-serif;
+    color: #444444;
+    
+  }
+  
+  a {
+    text-decoration: none;
+    color: #d9232d;
+  }
+  
+  a:hover {
+    color: #e24d55;
+    text-decoration: none;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Raleway", sans-serif;
+  }
+  
+  #header .logo {
+    font-family: cursive, sans-serif;
+    font-size: 28px;
+    font-weight: bolder;
+    /* font-style: ; */
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  
+  #header .logo a {
+    color: #7a0606;
+  }
+
+
+
+  .navbar {
+    padding: 0;
+    margin: 10px;
+  }
+  #header .navbar-nav a{
+color: #291b1b;
+font-size: large;
+font-weight: 500;
+
+  }
+
+  #header .navbar-nav a:hover{
+color: #f30707;
+
+  }
+  ul{
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  
+  
+  
+
+/* .header{
+    background-color: powderblue;
+} */
+
+#footer {
+    background: #4a5562;
+    padding: 0 0 30px 0;
+    color: powderblue;
+    font-size: 14px;
+  }
+  
+  
+  #footer .copyright {
+    text-align: center;
+    padding-top: 30px;
+  }
+  
+  #footer .credits {
+    padding-top: 10px;
+    text-align: center;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.6);
+  }
+    

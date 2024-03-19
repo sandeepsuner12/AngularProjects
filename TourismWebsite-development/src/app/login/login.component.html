@@ -1,0 +1,61 @@
+<div
+      class="container-item active"
+    >
+      <div class="container d-flex justify-content-center">
+        <div
+          class="d-flex flex-column p-5 m-5 "
+          
+        >
+          <form [formGroup]="loginForm">
+            <h3>Login</h3>
+            <div class="warning" *ngIf="invalidLogin">
+              {{ errorMessage }}
+            </div>
+
+            <div>
+              <label for="username"><strong>User Name:</strong></label>
+
+              <input
+                type="text"
+                class="form-control"
+                placeholder="User Name"
+                name="username"
+                placeholder="username"
+                formControlName="username"
+              />
+
+              <label for="password" class="form-label"><strong>Password:</strong></label>
+
+              <input
+                type="password"
+                class="form-control"
+                placeholder="password"
+                name="password"
+                formControlName="password"
+                id="password"
+              />
+              <a routerLink="../forgotpassword"><strong class="mt-2">Forgot Password</strong></a>
+            </div>
+            <div class="form-check">
+              <input
+                type="checkbox"
+                class="form-check-input"
+                id="isAdmin"
+                name="isAdmin"
+                placeholder="isAdmin"
+                formControlName="isAdmin"
+              />
+              <label for="isAdmin" class="form-check-label"
+                ><strong>Login as Admin</strong></label
+              >
+            </div>
+          </form>
+          <div class="d-flex justify-content-center m-3">
+            <button class="btn btn-primary" (click)="handleLogin()">
+              Login
+            </button>
+          </div>
+          <strong>New User? <a routerLink="../register">Register Here</a></strong>
+        </div>
+      </div>
+    </div>

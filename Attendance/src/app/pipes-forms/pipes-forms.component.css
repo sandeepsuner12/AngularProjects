@@ -1,0 +1,43 @@
+.pipes label{
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+}
+footer{
+    margin: 5rem 0;
+}
+
+.divForDirectiveTest{
+    margin: 2rem 0;
+    text-align: center;
+    background-color: #C4EEF2;
+    color: #3E848C;
+    border-radius: 10px;
+}
+.formforsignUp{
+    /*background-image: linear-gradient(to right, #60BF81,#60BF81); #93d94e #015958*/
+    width: 80%;
+    margin: 25px auto;
+}
+.formforsignUp input , .formforsignUp textarea,.formforsignUp select:not(.radioelement) {
+    width: 500px;
+}
+.formforsignUp label:not(.radiolabel){
+    margin: 0.5rem 0;
+}
+.radioelement
+{
+    display: inline;
+    border-radius: 21px;
+    padding: 0rem 11px; 
+
+}
+
+input.ng-invalid.ng-touched ,textarea.ng-invalid.ng-touched,select.ng-invalid.ng-touched  {
+    border: 2px solid red;
+}
+.warning{
+
+    color: red;
+    font-size: small;
+}

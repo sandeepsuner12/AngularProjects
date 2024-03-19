@@ -1,0 +1,28 @@
+.container{
+    padding: 50px;
+    display: flex;
+    background: transparent;
+    border-radius: 0%;
+}
+.login{
+    display: flex;
+    justify-content:flex-start;
+}
+ .container-item{
+background-repeat: no-repeat;
+/* background-position: 100%; */
+background-size: 100%;
+background-image: url(https://www.avis.co.in/blog/wp-content/uploads/2018/06/India_Rivers_Riverboat_Boats_Alappuzha_Kerala_527749_2048x1152.jpg);
+}
+strong{
+    color:white !important;
+}
+
+.warning{
+
+    color: rgb(215, 249, 49);
+    /* background-color: white; */
+    font-size: small;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /* font-weight: bold; */
+}

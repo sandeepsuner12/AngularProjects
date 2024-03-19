@@ -1,0 +1,132 @@
+<!-- <header class="header">
+    <nav class="navbar navbar-expand">
+     <div><a routerLink="/home" class="navbar-brand">Website Title</a></div>
+  
+      <ul class="navbar-nav">
+        <li><a  routerLink="/home" class="nav-link">Home</a></li>
+        <li><a  routerLink="/" class="nav-link">Destinations</a></li>
+        <li><a  routerLink="/" class="nav-link">Packages</a></li>
+      </ul>
+  
+      <ul class="navbar-nav navbar-collapse justify-content-end">
+        <li><a  routerLink="/register" class="nav-link">Travel Stories</a></li>
+        <li><a  routerLink="/register" class="nav-link">Gallery</a></li>
+        <li><a  routerLink="/register" class="nav-link">Register</a></li>
+        <li><a routerLink="/login" class="nav-link"><button type="button" class="btn btn-success">Login/Logout</button></a></li>
+      </ul>
+    </nav>
+  </header> -->
+
+  <!-- <header class="header" id="header">
+    <nav class="navbar navbar-expand">
+      <h1 class="logo me-auto">TourifyHub</h1>
+  
+      <ul class="navbar-nav navbar-expand" id="navbar">
+        <li><a routerLink="/home" class="nav-link">Home</a></li>
+        <li><a href="#locations" class="nav-link">Destinations</a></li>
+        <li>
+          <a routerLink="user/pacakge" class="nav-link" *ngIf="isUserLogin"
+            >Packages</a>
+        </li>
+      </ul> 
+      <ul class="navbar-nav navbar-collapse justify-content-end" >
+        <li *ngIf="isUserLogin">
+          <a routerLink="user/userprofile" class="nav-link">
+            <i class="fas fa-user"></i> Profile
+          </a>
+        </li>
+        <li>
+          <a routerLink="/register" class="nav-link" *ngIf="!isUserLogin"
+            >Register</a
+          >
+        </li>
+  
+        <li *ngIf="isUserLogin">
+          <a routerLink="/login" class="nav-link">
+            <button type="button" class="btn btn-warning">Logout</button>
+          </a>
+        </li>
+        <li *ngIf="!isUserLogin">
+          <a routerLink="/login" class="nav-link">
+            <button type="button" class="btn btn-success">Login</button>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  
+
+  
+<router-outlet></router-outlet>
+
+
+<footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Website Title</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        Designed by <a href=""></a>
+      </div>
+    </div>
+</footer> -->
+<header class="header" id="header">
+  <nav class="navbar navbar-expand">
+    <h1 class="logo me-auto">Journey Jive</h1>
+
+    <ul class="navbar-nav navbar-expand" id="navbar">
+      <li><a routerLink="/home" class="nav-link">Home</a></li>
+      <li><a href="#locations" class="nav-link">Destinations</a></li>
+      <li>
+        <a routerLink="user/pacakge" class="nav-link" *ngIf="isUserLogin"
+          >Packages</a
+        >
+      </li>
+    </ul>
+    <ul class="navbar-nav navbar-collapse justify-content-end" >
+      <li *ngIf="isUserLogin">
+        <a routerLink="user/userprofile" class="nav-link">
+          <i class="fas fa-user"></i> Profile
+        </a>
+      </li>
+      <li>
+        <a routerLink="/register" class="nav-link" *ngIf="!isUserLogin"
+          >Register</a
+        >
+      </li>
+
+      <!-- <li *ngIf="isUserLogin">
+        <a routerLink="/login" class="nav-link">
+          <button (click)="logOut()" type="button" class="btn btn-warning">Logout</button>
+        </a>
+      </li> -->
+      <li *ngIf="!isUserLogin">
+        <a routerLink="/login" class="nav-link">
+          <button type="button" class="btn btn-success">Login</button>
+        </a>
+      </li>
+      <li *ngIf="isUserLogin">
+        <a routerLink="" class="nav-link">
+          <button (click)=" logOut()" type="button" class="btn btn-success">LogOut</button>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+
+
+<router-outlet></router-outlet>
+
+
+<footer id="footer">
+  <div class="container">
+    <div class="copyright">
+      &copy; Copyright <strong><span>Website Title</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      Designed by SANDEEP RIYA SUNNY<a href=""></a>
+    </div>
+  </div>
+</footer>
+ 

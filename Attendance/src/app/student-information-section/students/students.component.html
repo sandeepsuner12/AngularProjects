@@ -1,0 +1,11 @@
+
+<div *ngFor="let students of studentInfo" class="studentInfoDisplay">
+    <div>{{students.eno}}</div>
+    <div>{{students.name}}</div>
+    <div>{{students.branch}}</div>
+    <div>{{students.address}}</div>
+    <!--  <button (click)="present(studentInfo.name)">Present</button> -->
+    <button (click)="submitName(students.name)">Present</button>
+    <button>Absent</button> 
+
+ </div>

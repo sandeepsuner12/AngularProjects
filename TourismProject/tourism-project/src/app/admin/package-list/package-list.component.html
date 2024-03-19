@@ -1,0 +1,92 @@
+<!-- 
+
+<div class="container m-3">
+  <div class="row gy-3">
+    <div class="col-sm-12 col-md-4 col-lg-3">
+    <div class="card ">
+      <img class="card-img-top"
+        src="https://media.istockphoto.com/id/1222034739/vector/space-background-starry-night-sky-infinite-universe-and-light-starry-vector-illustration.jpg?s=612x612&w=0&k=20&c=V6TYwCrqMjA0DEbgbWEj3NsPljKchefiwS2_tIOpMM0=" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Add new pacakge</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">{{0 | currency:'INR'}}</li>
+        <li class="list-group-item">0</li>
+      </ul>
+      <div class="card-body">
+        <a (click)="addPackage()" class="card-link">Add</a>
+      </div>
+    </div>
+  </div>
+    <div *ngFor="let pacakge of listOfPackages" class="col-sm-12 col-md-4 col-lg-3">
+
+
+      <div class="card">
+        <img class="card-img-top"
+        src={{pacakge.picture}} alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{pacakge?.location}}</h5>
+          <p class="card-text">{{pacakge?.description}}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">{{pacakge?.price | currency:'INR'}}</li>
+          <li class="list-group-item">{{pacakge?.numberofDays}}</li>
+        </ul>
+        <div class="card-body">
+          <a  (click)="editPackage(pacakge)" class="card-link">Edit</a>
+          <a  (click)="deletePackage(pacakge)" class="card-link">Delete</a>     
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div> -->
+
+
+<section id="packages" class="packages">
+  <div class="container">
+    <div class="d-flex package-item">
+      <img
+        class="package-image"
+        src="https://media.istockphoto.com/id/1222034739/vector/space-background-starry-night-sky-infinite-universe-and-light-starry-vector-illustration.jpg?s=612x612&w=0&k=20&c=V6TYwCrqMjA0DEbgbWEj3NsPljKchefiwS2_tIOpMM0="
+      />
+      <div class="package-content">
+          <h4>Package: <span class="name">Name Of Pacakge</span></h4>
+
+        <p>
+         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure nemo a doloremque tempora, expedita aspernatur atque dolore soluta optio assumenda repellat? Magni reprehenderit quos in nostrum deleniti voluptatibus porro at.
+        </p>
+        <h6>Trip Duration: 0 Days</h6>
+        <div class="price mt-4 mb-4">
+          <!-- <h3>₹{{pacakge.price}}</h3> -->
+          <h3>{{0 | currency:'INR':'symbol':'3.0-0'}}</h3>
+        </div>
+        <a (click)="addPackage()" class="btn-get-started">ADD PACAKGE</a>
+      </div>
+    </div>
+    <div *ngFor="let pacakge of listOfPackages" class="d-flex package-item">
+      <img
+        class="package-image"
+        src={{pacakge.picture}}
+      />
+      <div class="package-content">
+          <h4>Package: <span class="name">{{pacakge.location}}</span></h4>
+
+        <p>
+          {{pacakge.description}}
+        </p>
+        <h6>Trip Duration: {{pacakge.numberofDays}} Days</h6>
+        <div class="price mt-4 mb-4">
+          <!-- <h3>₹{{pacakge.price}}</h3> -->
+          <h3>{{pacakge.price | currency:'INR':'symbol':'3.0-0'}}</h3>
+        </div>
+
+        <a (click)="editPackage(pacakge)" class="btn-get-started ">Edit</a>
+        <a (click)="deletePackage(pacakge)" class="btn-get-started">Delete</a>
+      </div>
+    </div>
+  </div>
+  </section>
+

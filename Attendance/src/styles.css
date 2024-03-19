@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    background-image: linear-gradient(to left, #2A8C82, #9BF2EA);
+}
+
+
+div.highlightMe:hover{
+    color: #93d94e;
+    background-color: #015958;
+}

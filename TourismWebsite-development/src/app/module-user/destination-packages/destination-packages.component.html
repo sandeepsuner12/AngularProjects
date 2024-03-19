@@ -1,0 +1,46 @@
+
+<!-- <div class="container m-3">
+<div class="row gy-3">
+<div *ngFor="let pacakge of packages"  class="col-sm-12 col-md-4 col-lg-3">
+<div class="card" >
+    <img class="card-img-top" src={{pacakge.picture}} alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{pacakge.location}}</h5>
+      <p class="card-text">{{pacakge.description}}.</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">{{pacakge.price | currency:'INR'}}</li>
+      <li class="list-group-item">{{pacakge.numberofDays}}</li>
+    </ul>
+    <div class="card-body">
+      <a href="#" class="card-link">Book Now</a>
+    </div>
+  </div>
+</div>
+</div>
+</div> -->
+
+<section id="packages" class="packages">
+  <div class="container" *ngFor="let pacakge of listOfPackages">
+    <div class="d-flex package-item">
+      <img
+        class="package-image"
+        src={{pacakge.picture}}
+      />
+      <div class="package-content">
+          <h4>Package: <span class="name">{{pacakge.location}}</span></h4>
+
+        <p>
+          {{pacakge.description}}
+        </p>
+        <h6>Trip Duration: {{pacakge.numberofDays}} Days</h6>
+        <div class="price mt-4 mb-4">
+          <!-- <h3>₹{{pacakge.price}}</h3> -->
+          <h3>{{pacakge.price | currency:'INR':'symbol':'3.0-0'}}</h3>
+        </div>
+
+        <a (click)="bookPass(pacakge.id)" class="btn-get-started">Book Your Spot</a>
+      </div>
+    </div>
+  </div>
+  </section>

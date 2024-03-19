@@ -1,0 +1,31 @@
+.appbody :not(.buttonfordashboard){
+    width: 80%;
+    margin: 0 auto;
+
+}
+.buttonfordashboard{
+    width: 15%;
+    margin: auto 0;
+
+}
+
+.appbody .dashBorad{
+    background-color: #C4EEF2;
+    color: #A67458;
+    margin: 0rem 0rem 1rem 0rem;
+    width: 40rem;
+    border: #3E848C solid;
+    align-items: center;
+    /*line-height: 0.5rem;*/
+    
+}
+.appbody h2{
+    color: #025159;
+    text-align: center;
+    
+}
+.dashBorad button {
+    background-color: #F28705;
+    
+
+}

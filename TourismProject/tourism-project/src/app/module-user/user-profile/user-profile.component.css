@@ -1,0 +1,48 @@
+.container-item{
+    background-color: rgb(200, 231, 225);
+    /* height: 100vh; */
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.container-user{
+    background-color: white;
+    border-radius: 10px;
+    
+ 
+}
+.history{
+    display: flex; 
+    justify-content: center; 
+    flex-direction: column; 
+    align-items: center;
+    
+  }
+
+  .package-item {
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    margin: 30px;
+     padding: 30px;
+  } 
+
+  .container-history{
+    margin: 10px;
+  }
+ .hyperlink{
+color: blue;
+font-size: larger;
+font-family: sans-serif;
+text-decoration: none;
+ }
+ .hyperlink:hover{
+    color: rgb(243, 105, 13)
+     }
+
+     .alert{
+        color: red;
+        border: none;
+        margin: 0px;
+        padding: 0px;
+    }

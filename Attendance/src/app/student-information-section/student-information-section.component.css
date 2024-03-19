@@ -1,0 +1,36 @@
+label{
+    display: block;
+}
+
+.studentDisplaytitle{
+    background-color: #3CA6A6;
+    display: flex;
+    width: 12rem;
+    margin: 0rem 1rem 0rem 0rem;
+    padding-right: 28rem;
+    border:  outset 0.2rem #0FC2C0;
+    color: #DBF227;
+    
+}
+.studentDisplaytitle label{
+    margin: 0rem 5rem 0rem 0rem;
+}
+
+/*.studentDisplay{
+    
+    background-color: #015958;
+    color: #93D94E;
+    display: flex;
+    flex-direction: row;
+    border:  solid #0FC2C0;
+    /*justify-content: space-between;
+    border:  solid #F2E3D5;
+    /*justify-items: left;
+    margin: 0rem 1rem 0rem 1rem;
+    width: 40.3;
+}*/
+
+/*.studentDisplay button{
+    background-color: #F2668B;
+    
+}*/

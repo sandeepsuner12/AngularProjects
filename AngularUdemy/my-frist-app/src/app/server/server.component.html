@@ -1,0 +1,26 @@
+<p>Server is running</p>
+<!-- <input type="text" (input)="getInput($event)"> -->
+<p>Name <input type="text" [(ngModel)]="name"></p>
+<div>
+    <button [disabled]="!allowServers" (click)="onClickedAllow()" class="btn btn-primary">Add Server</button>
+    <button [disabled]="name===null || name == ''" (click)="name=null">Rename</button>
+</div>
+<div>
+    <p *ngIf="flagServer; else noServer" >{{ newServer }}</p>
+    <ng-template #noServer>
+        <strong>No server is up!</strong>
+    
+    </ng-template>
+    
+</div>
+<div>
+    <button class="btn btn-info" (click)="showDeatils()">Show Deatils</button>
+    <div *ngIf="deatilsFlag">
+        <p>Password is <i>NiPataYrr</i></p>
+        
+            <p *ngFor="let timeStamp of logdeatilsClicked; let i = index " [ngStyle]="{color:i>=5?'blue':'red'}">{{timeStamp}}</p>
+            <!-- <p *ngFor="let timeStamp of logdeatilsClicked" [ngClass]="[timeStamp>=5?{color:'red '} : { color:'blue' }]">{{timeStamp}}</p> -->
+       
+   </div>
+</div>
+

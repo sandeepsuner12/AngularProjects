@@ -1,0 +1,127 @@
+
+<div *ngIf="!show">
+    <button  (click)="show=!show" class="btn btn-primary m-3">Show</button> 
+</div>
+<div *ngIf="show" >
+    <button  (click)="show=!show" class="btn btn-warning m-3">Hide</button>  
+    <h1>This is the secret Information</h1>
+</div>
+
+<h3>Student of the year</h3>
+<button  (click)="name='ram'" [ngClass]="[name=='ram'?'btn btn-warning m-3':'btn btn-info m-3']">Ram</button> 
+<button  (click)="name='shyam'" [ngClass]="[name=='shyam'?'btn btn-warning m-3':'btn btn-info m-3']">Shyam</button> 
+<button  (click)="name='mohan'" [ngClass]="[name=='mohan'?'btn btn-warning m-3':'btn btn-info m-3']">Mohan</button> 
+<button  (click)="name='gita'" [ngClass]="[name=='gita'?'btn btn-warning m-3':'btn btn-info m-3']" >Gita</button> 
+<button  (click)="name='sita'" [ngClass]="[name=='sita'?'btn btn-warning m-3':'btn btn-info m-3']">Sita</button> 
+
+<section [ngSwitch]="name">
+    <label *ngSwitchCase="'ram'" >{{name|uppercase}}</label>
+    <label *ngSwitchCase="'shyam'" >{{name|uppercase}}</label>
+    <label *ngSwitchCase="'mohan'" >{{name|uppercase}}</label>
+    <label *ngSwitchCase="'gita'" >{{name|uppercase}}</label>
+    <label *ngSwitchCase="'sita'" >{{name|uppercase}}</label>
+    <label  *ngSwitchDefault >Not Decided yet</label>
+
+</section>
+
+<section [ngStyle]="{'background-color':show?'white':'blue'}">
+    <p [ngStyle]="{'text-align':'center'}">Just to check ngStyle</p>
+</section>
+<div class="pipes">
+    <label>----------------------------pipes date--------------------------------</label>
+    <label>simple date ---:><strong>{{currentDate}}</strong></label>
+    <label>short ---:><strong>{{currentDate | date:'short'}}</strong></label>
+    <label>medium ---:><strong>{{currentDate | date:'medium'}}</strong></label>
+    <label>long ---:><strong>{{currentDate | date: 'long'}}</strong></label>
+    <label>full ---:><strong>{{currentDate | date:'full'}}</strong></label>
+    <label>shortDate ---:><strong>{{currentDate | date:'shortDate'}}</strong></label>
+    <label>mediumDate ---:><strong>{{currentDate | date:'mediumDate'}}</strong></label>
+    <label>longDate ---:><strong>{{currentDate | date:'longDate'}}</strong></label>
+    <label>fullDate ---:><strong>{{currentDate | date:'fullDate'}}</strong></label>
+    <label>mediumTime---:><strong>{{currentDate | date:'mediumTime'}}</strong></label>
+
+    <label>Formated to Give mounth-Weekday-date-time {{ '{' }}MMMM-EEEE-d-h:mm-a{{ '}' }}---:><strong>{{currentDate | date:'MMMM-EEEE-d-h:mm-a'}}</strong></label>
+
+    <label>----------------------------pipes StringUpper And String Lower--------------------------------</label>
+
+    <label>String="i am small" ---:><strong>{{"i am small"|uppercase}}</strong></label>
+    <label>String="I AM BIG" ---:><strong>{{"I AM BIG"|lowercase}}</strong></label>
+    <label>String="I want to be title of something" ---:><strong>{{"I want to be title of something"|titlecase}}</strong></label>
+
+    <label>----------------------------Currency and number--------------------------------</label>
+
+    <label>{{amount}} in  currency ---:><strong>{{amount|currency}}</strong></label>
+    <label>{{amount2}} in  currency : 'INR' ---:><strong>{{amount2|currency : 'INR'}}</strong></label>
+    <label>{{amount2}} in  currency:'CAD':'symbol':'3.2-2' ---:><strong>{{amount2|currency:'CAD':'symbol':'3.2-2'}}</strong></label> 
+    <label>{{amount2}} in  currency:'INR':'symbol':'4.2-2' ---:><strong>{{amount2|currency:'INR':'symbol':'4.2-2'}}</strong></label>
+    <label>{{amount}} in  currency:'EUR':'symbol':'4.2-2' ---:><strong>{{amount|currency:'EUR':'symbol':'4.2-2'}}</strong></label>
+</div>
+
+<div appColorChanger class="divForDirectiveTest">Test the directive</div>
+
+
+<form class="formforsignUp" [formGroup]="signUpForm" novalidate>
+    <fieldset >
+
+        <label for="firstName">First Name</label>
+        <label *ngIf="signUpForm.controls['firstName'].status==='INVALID'&&signUpForm.controls['firstName'].touched" class="warning">*fill correctly</label>
+        <label *ngIf="submitFlag && signUpForm.controls['firstName'].status==='INVALID'" class="warning">*requried filed</label>
+        <input type="text" id="firstName" formControlName="firstName" class="form-control" placeholder="First Name..">
+
+        <label for="lastName">Last Name</label>
+        <label *ngIf="signUpForm.controls['lastName'].status==='INVALID'&&signUpForm.controls['lastName'].touched" class="warning">*fill correctly</label>
+        <label *ngIf="signUpForm.controls['lastName'].status==='INVALID' && submitFlag" class="warning">*requried filed</label>
+        <input type="text" id="lastName" formControlName="lastName" class="form-control" placeholder="Last Name..">
+
+        <label for="phoneNo">Phone Number</label>
+        <label *ngIf="signUpForm.controls['phoneNo'].status==='INVALID'&&signUpForm.controls['phoneNo'].touched" class="warning">*fill correctly</label>
+        <label *ngIf="signUpForm.controls['phoneNo'].status==='INVALID'&& submitFlag" class="warning">*requried filed</label>
+        <input type="text" id="phoneNo"  formControlName="phoneNo" class="form-control">
+        
+        <label for="email">Email</label>
+        <label *ngIf="signUpForm.controls['email'].status==='INVALID'&&signUpForm.controls['email'].touched" class="warning">*fill correctly</label>
+        <label *ngIf="signUpForm.controls['email'].status==='INVALID'&& submitFlag" class="warning">*requried filed</label>
+        <input type="email" id="email" formControlName="email" class="form-control" placeholder="Email..">
+         
+        <label class="mt-3">Gender:</label>
+        <label *ngIf="submitFlag && signUpForm.controls['gender'].status==='INVALID'" class="warning">*requried filed</label>
+        <div *ngFor="let gender of genders">
+            <div class="m-3">
+             <label class="radiolabel">
+                 <input type="radio" formControlName="gender" class="form-control radioelement" [value]="gender">
+                 <strong class="p-3">{{gender}}</strong>
+                
+             </label>
+            </div>
+         </div>
+ 
+        <label>State</label>
+        <label *ngIf="signUpForm.controls['state'].status==='INVALID'&&signUpForm.controls['state'].touched" class="warning">*fill correctly</label> 
+        <label *ngIf="signUpForm.controls['state'].status==='INVALID'&& submitFlag" class="warning">*requried filed</label> 
+        <select formControlName="state" class="form-control" >
+            <option value="" disabled>Select one</option>
+            <option *ngFor="let stateName of states"  [value]="stateName" >{{stateName}}</option>
+        </select>
+
+        <label for="city">City</label>
+        <label *ngIf="signUpForm.controls['city'].status==='INVALID'&&signUpForm.controls['city'].touched" class="warning">*fill correctly</label>
+        <label *ngIf="signUpForm.controls['city'].status==='INVALID'&& submitFlag" class="warning">*requried filed</label>  
+        <input type="text" id="city" formControlName="city" class="form-control" placeholder="City..">
+
+        <label for="address">Full Address</label>
+        <label *ngIf="signUpForm.controls['address'].status==='INVALID'&&signUpForm.controls['address'].touched" class="warning">*fill correctly</label> 
+        <label *ngIf="signUpForm.controls['address'].status==='INVALID'&&submitFlag" class="warning">*requried filed</label> 
+        <textarea formControlName="address" id="address" class="form-control" cols="10" rows="3" ></textarea>
+        <section class=" my-3 mx-5">
+            <button (click)="submitForm()" class="btn btn-primary ">Submit</button>
+        </section>
+        
+      
+      
+
+    </fieldset>
+</form>
+
+<footer>
+    
+</footer>

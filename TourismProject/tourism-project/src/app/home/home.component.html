@@ -1,0 +1,49 @@
+<section id="home">
+    <div class="container-inner">
+        <div class="container-item active " style="background-image: url(https://www.mptourism.com/images/Destinations.jpg);background-repeat: no-repeat; background-size: cover;">
+            <div class="container-container">
+                <div class="container">
+                    <h3>Welcome to <span>India Tourism </span></h3>
+                    <p>
+                        You are one step away from Landscapes that will take your breath
+                        away, rich history, and delicious food, your trip to
+                        <strong>India</strong> will be nothing short of unforgettable.
+                    </p>
+                    <a routerLink="/login" class="btn-get-started">Book Your Spot</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container-2">
+    <h2 style="color: rgb(93, 93, 233); text-align: center;">
+        <strong>WE'RE HERE TO SHOW YOU THE ESSENCE OF INDIA</strong>
+        <!-- <img src="https://www.mptourism.com/images/reason_4.png" alt="dummy" /> -->
+    </h2>
+    <h4 class="m-4" style="text-align: center;">
+        We're ready to bring you an India like no other. Our India travel experts
+        craft unique experiences with heart, with one goal in mind: to present India
+        with passion
+    </h4>
+    <div class="discover">
+        <h4 style="font-weight: lighter">India</h4>
+        <h3>Discover India</h3>
+    </div>
+
+    <section id="locations" class="locations">
+        <div *ngFor="let pacakge of listOfPackages" class="container">
+            <div class="d-flex location-item m-5">
+                <img class="location-image"
+                src={{pacakge.picture}} />
+                <div class="location-content">
+                    <h4><a routerLink="/login">{{pacakge.location}}</a></h4>
+                    <p>
+                        {{pacakge.description}}
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</div>

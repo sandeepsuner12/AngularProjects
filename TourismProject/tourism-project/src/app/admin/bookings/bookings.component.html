@@ -1,0 +1,46 @@
+<!-- <input type="date" placeholder="From"> -->
+<div>
+  <nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand">Apply Date Filter</a>
+      <form [formGroup]="filterForm" class="d-flex">
+        <label class="pt-2 me-2">form</label>
+        <!-- <input class="form-control me-2" type="date" placeholder="Search" aria-label="Search"> -->
+        <input type="Date" class="form-control" formControlName="startDate"  placeholder="Select Date"
+          name="startDate" />
+        <label class=" pt-2 me-2"> to</label>
+        <input type="Date" class="form-control" formControlName="endDate"  placeholder="Select Date"
+        name="startDate" />
+        <!-- <input class="form-control me-2" type="date" placeholder="Search" aria-label="Search"> -->
+        <button class="btn btn-outline-success" (click)="serach()" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+</div>
+
+
+
+<ul class="list-group list-group-horizontal">
+  <li class="list-group-item bg-secondary bg-gradient ">Booking Id</li>
+  <!-- <li class="list-group-item bg-secondary bg-gradient ">Name</li> -->
+  <li class="list-group-item bg-secondary bg-gradient ">Email</li>
+  <li class="list-group-item bg-secondary bg-gradient ">Booked Package</li>
+  <li class="list-group-item bg-secondary bg-gradient ">Members</li>
+  <li class="list-group-item bg-secondary bg-gradient ">Tour date</li>
+</ul>
+
+<ul *ngFor="let booking of  bookings" class="list-group list-group-horizontal-sm w-100">
+  <!-- <li class="list-group-item">{{booking[0]}}</li>
+  <li class="list-group-item">{{booking[1]}}</li>
+  <li class="list-group-item">{{booking[2]}}</li>
+  <li class="list-group-item">{{booking[3]}}</li>
+  <li class="list-group-item">{{booking[4]}}</li>
+  <li class="list-group-item">{{booking[5]}}</li> -->
+  <li class="list-group-item">{{booking.id}}</li>
+  <!-- <li class="list-group-item">{{booking.username}}</li> -->
+  <li class="list-group-item">{{booking.username}}</li>
+  <li class="list-group-item">{{booking.packageid}}</li>
+  <li class="list-group-item">{{booking.numberOfPerson}}</li>
+  <li class="list-group-item">{{booking.startDate}}</li>
+</ul>
+

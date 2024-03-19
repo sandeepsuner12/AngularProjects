@@ -1,0 +1,23 @@
+.studentInfoDisplay{
+    background-color: #015958;;
+    color: #93D94E;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border:  outset 0.2rem  #0FC2C0;
+    /*justify-items: left;*/
+    width: 35rem;
+    padding: 0rem 4rem 0rem 1rem;
+    flex-basis: 15%;
+    
+}
+.studentInfoDisplay button{
+    background-color: #F2668B;
+}
+label{
+    display: block;
+}
+.studentInfoDisplay div{
+    text-align: left;
+}
+

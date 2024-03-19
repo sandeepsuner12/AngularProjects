@@ -1,0 +1,31 @@
+<div class="appbody">
+    <button *ngIf="!attendancDashborad" (click)="attendancDashborad=!attendancDashborad " class="btn btn-primary m-3 buttonfordashboard">Attendance Dashborad</button> 
+    <button *ngIf="attendancDashborad" (click)="attendancDashborad=!attendancDashborad" class="btn btn-warning m-3 buttonfordashboard">Hide Dashborad</button>
+
+    <div *ngIf="attendancDashborad">  
+        <h1>{{title}}</h1>
+
+        <div class="dashBorad">
+        <h2>Student Dash Borad</h2>
+        <ul class="listOfPresntStudents" *ngFor="let name of presentStudentNames">
+            <li>
+                {{name}}
+            </li>
+        </ul>
+            <!-- 
+                <div class="listOfPresntStudents" *ngFor="let name of presentStudentNames">
+                    <div>{{name}}</div>
+                </div>
+                
+                <button (click)="refresh()">Refresh</button>
+                -->
+                
+        </div>
+        <app-student-information-section></app-student-information-section>
+    </div>
+          
+</div>
+
+<app-pipes-forms></app-pipes-forms>
+
+<router-outlet></router-outlet>

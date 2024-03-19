@@ -1,0 +1,18 @@
+
+<section class="form-container">
+    <h1>Registration Form</h1>
+    <form [formGroup]="registrationForm">
+        <fieldset>
+            <label for="name">Name</label>
+            <input id="name" type="text"formControlName="name" class="form-control">
+            <label for="mobile">Mobile</label>
+            <input id="mobile" type="number"formControlName="mobile" class="form-control">
+            <label for="email">Email</label>
+            <input id="email" type="email"formControlName="email" class="form-control">
+            <label for="dept">Department</label>
+            <input id="dept" type="text"formControlName="dept" class="form-control">
+
+            <button class="btn btn-primary form-control" (click)="register()">Register</button>
+        </fieldset>
+    </form>
+</section>

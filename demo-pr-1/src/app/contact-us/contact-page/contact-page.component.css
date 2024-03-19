@@ -1,0 +1,15 @@
+section{
+    margin: 10px auto;
+    width: 80%;
+}
+h1 ,h3 , h4{
+    margin: 1rem;
+    text-align: center;
+    color: #731702;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+p , b{
+    /*color: #3B8C66;*/
+    color : #044040;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

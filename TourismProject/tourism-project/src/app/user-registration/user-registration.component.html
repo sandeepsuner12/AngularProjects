@@ -1,0 +1,209 @@
+
+<div class="container-item">
+  
+    <div class="container d-flex justify-content-center">
+    <div
+      class="d-flex flex-column m-4"
+    >
+    <h3>User Registration</h3>
+      <form [formGroup]="signUpForm">    
+        <div>
+          <label for="firstName" class="form-label">First Name:</label>
+          <div
+            *ngIf="
+              (isSubmit === true &&
+                signUpForm.controls['firstName'].status === 'INVALID') ||
+              (signUpForm.controls['firstName'].status === 'INVALID' &&
+                signUpForm.controls['firstName'].touched)
+            "
+            class="alert alert-warning"
+          >
+            This Field Required*
+          </div>
+    
+          <input
+            type="text"
+            class="form-control"
+            formControlName="firstName"
+            id="pwd"
+            placeholder="First Name"
+            name="firstName"
+          />
+    
+          <label for="lastName" class="form-label">Last Name:</label>
+          <div
+            *ngIf="
+              (isSubmit === true &&
+                signUpForm.controls['lastName'].status === 'INVALID') ||
+              (signUpForm.controls['lastName'].status === 'INVALID' &&
+                signUpForm.controls['lastName'].touched)
+            "
+            class="alert alert-warning"
+          >
+            This Field Required*
+          </div>
+    
+          <input
+            type="text"
+            class="form-control"
+            formControlName="lastName"
+            id="lastName"
+            placeholder="Last Name"
+            name="lastName"
+          />
+          <div>
+            <div class="form-group">
+              <label for="gender" class="form-label"> Gender:</label>
+              <div
+                *ngIf="
+                  (isSubmit === true &&
+                    signUpForm.controls['gender'].status === 'INVALID') ||
+                  (signUpForm.controls['gender'].status === 'INVALID' &&
+                    signUpForm.controls['gender'].touched)
+                "
+                class="alert alert-warning"
+              >
+                This Field Required*
+              </div>
+            </div>
+            <div class="mb-3">
+              <input
+                formControlName="gender"
+                type="radio"
+                name="gender"
+                value="male"
+              />
+              <label for="gender">Male</label>
+              <br />
+              <input
+                formControlName="gender"
+                type="radio"
+                name="gender"
+                value="female"
+              />
+              <label for="gender">Female</label>
+            </div>
+          </div>
+          <label for="email" class="form-label">Email:</label>
+          <div
+            *ngIf="
+              (isSubmit === true &&
+                signUpForm.controls['email'].status === 'INVALID') ||
+              (signUpForm.controls['email'].status === 'INVALID' &&
+                signUpForm.controls['email'].touched)
+            "
+            class="alert alert-warning"
+          >
+            This Field Required*
+          </div>
+    
+          <input
+            type="text"
+            class="form-control"
+            formControlName="email"
+            id="email"
+            placeholder="Email"
+            name="email"
+          />
+    
+          <label for="phnumber" class="form-label">Phone Number:</label>
+          <div
+            *ngIf="
+              (isSubmit === true &&
+                signUpForm.controls['phnumber'].status === 'INVALID') ||
+              (signUpForm.controls['phnumber'].status === 'INVALID' &&
+                signUpForm.controls['phnumber'].touched)
+            "
+            class="alert alert-warning"
+          >
+            This Field Required*
+          </div>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="phnumber"
+            id="phnumber"
+            placeholder="Phone Number"
+            name="phnumber"
+          />
+    
+    
+          <label for="country" class="form-label">Country:</label>
+          <div
+            *ngIf="
+              (isSubmit === true &&
+                signUpForm.controls['country'].status === 'INVALID') ||
+              (signUpForm.controls['country'].status === 'INVALID' &&
+                signUpForm.controls['country'].touched)
+            "
+            class="alert alert-warning"
+          >
+            This Field Required*
+          </div>
+    
+          <input
+            type="text"
+            class="form-control"
+            formControlName="country"
+            id="country"
+            placeholder="Country"
+            name="country"
+          />
+        </div>
+        <label for="password" class="form-label">Password:</label>
+        <div
+          *ngIf="
+            (isSubmit === true &&
+              signUpForm.controls['password'].status === 'INVALID') ||
+            (signUpForm.controls['password'].status === 'INVALID' &&
+              signUpForm.controls['password'].touched ) 
+          "
+          class="alert alert-warning"
+        >
+          This Field Required*
+        </div>
+    
+        <input
+          type="password"
+          class="form-control"
+          formControlName="password"
+          id="password"
+          placeholder="Password"
+          name="password"
+        />
+        <label for="confirmPassword" class="form-label">Confirm Password:</label>
+        <div
+          *ngIf="
+            (isSubmit === true &&
+              signUpForm.controls['confirmPassword'].status === 'INVALID') ||
+            (signUpForm.controls['confirmPassword'].status === 'INVALID' &&
+              signUpForm.controls['confirmPassword'].touched)"
+          class="alert alert-warning"
+        >
+          This Field Required*
+        </div>
+        <div
+        *ngIf="signUpForm.controls['password'].value !== signUpForm.controls['confirmPassword'].value" class="alert alert-warning">
+    *Password did not matched
+    </div>
+        <input
+          type="password"
+          class="form-control"
+          formControlName="confirmPassword"
+          id="confirmPassword"
+          placeholder="Confirm Password"
+          name="confirmPassword"
+        />
+      </form>
+      <div class="d-flex justify-content-center m-3 ">
+        <a >
+          <button class="btn btn-primary " (click)="handleSubmit()">
+            Submit
+          </button></a
+        >
+        <div style="width: 50px;"></div>
+        <button class="btn btn-secondary">Cancel</button>
+      </div>
+    </div>
+    </div>
+    </div>

@@ -1,0 +1,17 @@
+/* table , tr , td {
+    border: 2px solid black;
+    text-align: center;
+} */
+
+.table-container{
+    margin: 5rem auto;
+    width: 75%;
+    padding: 2rem 5%;
+    border-radius: 12px;
+    background-color: /*#347355* #3B8C66 #223240*/ #F2CB05;
+    color: #267365;
+    box-shadow: 12px 12px 2px 1px #347355;  
+}
+table{
+    color: black;
+}

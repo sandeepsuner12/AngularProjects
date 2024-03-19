@@ -1,0 +1,13 @@
+.abc{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    
+}
+.xyz{
+    flex-basis: 9%;
+   
+}
+.adimn-pages{
+    width: 100%;
+}

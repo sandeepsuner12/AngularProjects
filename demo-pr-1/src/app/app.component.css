@@ -1,0 +1,25 @@
+nav{
+    margin: 0 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #97A6A0;
+    height: 2rem;
+    align-items: center;
+} 
+
+.navbar{
+    padding: 0 0;
+}
+.navbar a{
+    width: 50%;
+    text-align: center;
+}
+.navbar a {
+    width: 50%;
+    text-align: center;
+    color: #E4F2E7;
+}
+.navbar a:active{
+    background-color: #93BFB7;
+} 

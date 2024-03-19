@@ -1,0 +1,92 @@
+<!-- 
+
+<div class="container m-3">
+  <div class="row gy-3">
+    <div class="col-sm-12 col-md-4 col-lg-3">
+    <div class="card ">
+      <img class="card-img-top"
+        src="https://media.istockphoto.com/id/1222034739/vector/space-background-starry-night-sky-infinite-universe-and-light-starry-vector-illustration.jpg?s=612x612&w=0&k=20&c=V6TYwCrqMjA0DEbgbWEj3NsPljKchefiwS2_tIOpMM0=" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Add new pacakge</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">{{0 | currency:'INR'}}</li>
+        <li class="list-group-item">0</li>
+      </ul>
+      <div class="card-body">
+        <a (click)="addPackage()" class="card-link">Add</a>
+      </div>
+    </div>
+  </div>
+    <div *ngFor="let pacakge of listOfPackages" class="col-sm-12 col-md-4 col-lg-3">
+
+
+      <div class="card">
+        <img class="card-img-top"
+        src={{pacakge.picture}} alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{pacakge?.location}}</h5>
+          <p class="card-text">{{pacakge?.description}}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">{{pacakge?.price | currency:'INR'}}</li>
+          <li class="list-group-item">{{pacakge?.numberofDays}}</li>
+        </ul>
+        <div class="card-body">
+          <a  (click)="editPackage(pacakge)" class="card-link">Edit</a>
+          <a  (click)="deletePackage(pacakge)" class="card-link">Delete</a>     
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div> -->
+
+
+<section id="packages" class="packages">
+  <div class="container">
+    <div class="d-flex package-item">
+      <img
+        class="package-image"
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAMAAACahl6sAAAAbFBMVEX///8AAADHx8fDw8MvLy9bW1uvr6/r6+s3NzfLy8sbGxuHh4efn59HR0c/Pz8rKysjIyMKCgrV1dX19fVUVFS5ubmAgIBgYGDg4ODv7+8dHR2UlJRsbGzR0dGlpaXj4+OOjo4SEhJ2dnacnJxukJ8hAAADP0lEQVR4nO3caXeiMBiGYeNCbNVKcK2jTK3//z+OdeZoNggEsjHP9bFwKLe+tTVCRyMAAAAAAAAAAAAAAAAAgC6KN9El9AnZmhPRe+gTsoWQ2CAkNgiJDUJig5DYICQ2CIkNQmKDkNggJDYIiU1qIfI63NNaCrlW7RjJyp38wLcXyVPVe0i2tFVmXZ7c3kOmXY7FZpNhhNytjgMJISwbSAgh5VBC2HggISTfDCSELIYSYvFLNs4QshtKyH4oIduhhMzDh3xSW1vuoNPwIfZmnUKWiwon6XxZ1Y6/4gip5P+tLkLqIcQaQuohxBpC6iHEZLP72n/tPtUNaYXQM3scjh2U9aukQnbX5wGZvOqTUkgmHPImbkwopGDiMcX1q4RCVtIxxdNNJ6QgMmGxJJ2QvRJy5jenE7IlMmGNIZ0QdX3gxG9OJ+RDCcn5zemEzIjso2pz3CE3JURYGQ0aQufL5oek0u9DQgp+c8gQuibk0PxTmW/pmAdhq6MQeeVOtw5HH5dHrAvNJq2NeDnFiQpbHYU0QP+dF2s8Xsecf46lByBYCH09vo3Hi77+3PqQ35CECqH8nDQfr8n250eerdRP0wOFUHHem4/XfcAu2qsbwoRQ+TKoNq9eekFC1I4246UXIkTX0W68NAKE6Du6jpf/kMqObuPlP0T9c9wwXmWjz//9h1Q/IdrxKu/7b3+bDxtbiDRe5d+92cL44xNdCL+GWL72XZvmy1kI/9G/sOZsCnmOVynuaZgvZyH8cprwntQc8hivMpe/Wj9fUYYQtlcyHoE18xVnSKXq+UospHq+UgshJNfPV3oh9/nSvSFJMUQ7X0mG6OYr0RB1vpINkecr3RA/i9heQnx8rIAQhCAEIQhBiKOQXdYXH9ei1IQ4ghAThFhCiAlCLCHEBCGWEGLCh0zH7q1chahXt/rT/l7dGueAIe3vnq6hXkvpT/v72WscA4bY/B+Oat3vrLaVm0+ujcz8HR25mU+uFfl+D196fc36Qd+DdFw7XsGmcbkG6GDW/5qqRtHf0k9TpzcHHaPR5lu5oN2ts+ZWy37Qhb+X4em+wXVdHWyK8cS9cdH1glsAAAAAAAAAAAAAAAAA+O/8AekkR1af4q8IAAAAAElFTkSuQmCC"
+      />
+      <div class="package-content">
+          <h4>Package: <span class="name">Name Of Pacakge</span></h4>
+
+        <p>
+         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure nemo a doloremque tempora, expedita aspernatur atque dolore soluta optio assumenda repellat? Magni reprehenderit quos in nostrum deleniti voluptatibus porro at.
+        </p>
+        <h6>Trip Duration: 0 Days</h6>
+        <div class="price mt-4 mb-4">
+          <!-- <h3>₹{{pacakge.price}}</h3> -->
+          <h3>{{0 | currency:'INR':'symbol':'3.0-0'}}</h3>
+        </div>
+        <a (click)="addPackage()" class="btn-get-started">ADD PACAKGE</a>
+      </div>
+    </div>
+    <div *ngFor="let pacakge of listOfPackages" class="d-flex package-item">
+      <img
+        class="package-image"
+        src={{pacakge.picture}}
+      />
+      <div class="package-content">
+          <h4>Package: <span class="name">{{pacakge.location}}</span></h4>
+
+        <p>
+          {{pacakge.description}}
+        </p>
+        <h6>Trip Duration: {{pacakge.numberofDays}} Days</h6>
+        <div class="price mt-4 mb-4">
+          <!-- <h3>₹{{pacakge.price}}</h3> -->
+          <h3>{{pacakge.price | currency:'INR':'symbol':'3.0-0'}}</h3>
+        </div>
+
+        <a (click)="editPackage(pacakge)" class="btn-get-started ">Edit</a>
+        <a (click)="deletePackage(pacakge)" class="btn-get-started">Delete</a>
+      </div>
+    </div>
+  </div>
+  </section>
+

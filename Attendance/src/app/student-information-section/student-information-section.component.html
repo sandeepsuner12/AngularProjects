@@ -1,0 +1,29 @@
+<input type="text" [(ngModel)]="givenText">{{givenText}} 
+<div class="studentDisplaytitle"><label>Enroll</label><label>Name</label><label>Branch</label><label>Address</label></div>
+
+<!-- 
+
+<div *ngFor="let student of studentList" class="studentDisplay">
+        
+        <label>{{student.eno}}</label>
+        <label>{{student.name}}</label>
+        <label>{{student.branch}}</label>
+        <label>{{student.address}}</label>
+         </div>
+
+<div *ngFor="let student of studentList" class="studentDisplay">
+        <app-students [studentInfo]="student"></app-students>
+         <button (click)="present(student.name)">Present</button>
+              <button>Absent</button> 
+    
+ </div>
+      
+-->  
+<!-- <input type="text" [(ngModel)]="givenText">{{givenText}} 
+ <app-students [studentInfo]="student"  [givenText]="givenText" (emitStudentName)="present($event)"></app-students>
+
+<div *ngFor="let student of studentList" class="studentDisplay">
+        <app-students [studentInfo]="student"  (emitStudentName)="present($event)"></app-students>
+</div>
+-->
+<app-students [studentInfo]="studentList"  (emitStudentName)="present($event)"></app-students>

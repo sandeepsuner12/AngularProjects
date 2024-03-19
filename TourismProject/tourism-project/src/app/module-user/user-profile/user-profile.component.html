@@ -1,0 +1,144 @@
+<!-- <div class="container-item">
+    <div class="container d-flex justify-content-center">
+      <div class="container-user d-flex flex-column p-5 m-5">
+        <h4>Personal Information:</h4>
+        <h5><strong>First Name:</strong></h5>
+        <h5><strong>Last Name:</strong></h5>
+        <h5><strong>Gender:</strong></h5>
+        <h5><strong>Email:</strong></h5>
+        <h5><strong>Phone:</strong></h5>
+        <a class="hyperlink" (click)="changePassword()">Change Password</a>
+  
+        <div *ngIf="isChangePasswordClicked">
+          <form [formGroup]="changePasswordForm">
+            <label for="password" class="form-label">New Password:</label>
+  
+            <input
+              type="password"
+              class="form-control"
+              formControlName="newPassword"
+              id="newPassword"
+              placeholder="New Password"
+              name="password"
+            />
+            <label for="confirmPassword" class="form-label"
+              >Confirm New Password:</label
+            >
+           
+            <div
+              *ngIf="
+                (changePasswordForm.controls['newPassword'].value !==
+                changePasswordForm.controls['confirmNewPassword'].value)&&(changePasswordForm.controls['confirmNewPassword'].touched)
+              "
+              class="alert"
+            >
+              *Password did not matched
+            </div>
+            <input
+              type="password"
+              class="form-control"
+              formControlName="confirmNewPassword"
+              id="confirmNewPassword"
+              placeholder="Confirm New Password"
+              name="confirmNewPassword"
+            />
+  
+            <a>
+              <button class="btn btn-secondary m-3"  >
+                Submit
+              </button></a
+            >
+  
+      </form>
+        </div>
+      </div>
+    </div>
+   
+    <div class="container-history ">
+      <div class="package-item m-3 ">
+        <div class="history">
+          <h4 style="font-weight: lighter">User Name</h4>
+          <h3>Travel history</h3>
+        </div>
+          <h5><strong>Package:</strong></h5>
+          <h5><strong>Number of Passes:</strong></h5>
+          <h5><strong>Trip Duration:</strong></h5>
+          <h5><strong>Booking Date:</strong></h5>
+          <h5><strong>Price:</strong></h5>
+      
+      </div>
+    </div>
+  </div>
+       -->
+
+       <div class="container-item">
+        <div class="container d-flex justify-content-center">
+          <div *ngIf="user" class="container-user d-flex flex-column p-5 m-5">
+            <h4>Personal Information:</h4>
+            <h5><strong>First Name : {{user.firstName}}</strong></h5>
+            <h5><strong>Last Name : {{user.lastName}}</strong></h5>
+            <h5><strong>Gender : {{user.gender}}</strong></h5>
+            <h5><strong>Email : {{user.email}}</strong></h5>
+            <h5><strong>Phone : {{user.phnumber}}</strong></h5>
+            <a class="hyperlink" (click)="isChangePasswordClicked=!isChangePasswordClicked">Change Password</a>
+      
+            <div *ngIf="isChangePasswordClicked">
+              <form [formGroup]="changePasswordForm">
+                <label for="password" class="form-label">New Password:</label>
+      
+                <input
+                  type="password"
+                  class="form-control"
+                  formControlName="newPassword"
+                  id="newPassword"
+                  placeholder="New Password"
+                  name="password"
+                />
+                <label for="confirmPassword" class="form-label"
+                  >Confirm New Password:</label
+                >
+               
+                <div
+                  *ngIf="
+                    (changePasswordForm.controls['newPassword'].value !==
+                    changePasswordForm.controls['confirmNewPassword'].value)&&(changePasswordForm.controls['confirmNewPassword'].touched)
+                  "
+                  class="alert"
+                >
+                  *Password did not matched
+                </div>
+                <input
+                  type="password"
+                  class="form-control"
+                  formControlName="confirmNewPassword"
+                  id="confirmNewPassword"
+                  placeholder="Confirm New Password"
+                  name="confirmNewPassword"
+                />
+      
+                <a>
+                  <button (click)="changePassword()" class="btn btn-secondary m-3"  >
+                    Submit
+                  </button></a
+                >
+      
+          </form>
+            </div>
+          </div>
+        </div>
+        <div class="history">
+          <h4 style="font-weight: lighter">User Name</h4>
+          <h3>Travel history</h3>
+        </div>
+      
+        <div  class="container-history">
+          <div *ngFor="let trip of bookings" class="package-item m-3">
+              <h5><strong>Package : {{trip.loc}} </strong></h5>
+              <h5><strong>Number of Passes : {{trip.noOfPass}}</strong></h5>
+              <h5><strong>Trip Duration :  {{trip.duration}}</strong></h5>
+              <h5><strong>Travel Date : {{trip.travelDate}} </strong></h5>
+              <h5><strong>Price :  {{trip.cost}}</strong></h5>
+            
+          </div>
+        </div>
+      </div>

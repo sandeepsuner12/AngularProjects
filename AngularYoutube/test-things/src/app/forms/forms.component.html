@@ -1,0 +1,14 @@
+
+
+<form #basicForm="ngForm" (ngSubmit)="getDatat(basicForm.value)">
+    <input type="text" ngModel name="User" placeholder="Name">
+    <br /> <br />
+    <input type="text" ngModel name="Email" placeholder="Email">
+    <br /> <br />
+    <input type="text" ngModel name="Address" placeholder="Address">
+    <br /> <br />
+    <button type="reset">submit</button>
+    <!-- <button type="button">submit1</button> -->
+    <button >submit1</button>
+    <!-- <button (click)="getDatat(basicForm.value)">submit</button> -->
+</form>

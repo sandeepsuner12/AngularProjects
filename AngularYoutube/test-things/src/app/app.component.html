@@ -1,0 +1,74 @@
+<app-header></app-header>
+<hr>
+<app-forms></app-forms>
+
+
+<!-- differebt event types and geting Element value by #id and by event in .ts file -->
+<input type="text" id="box" #abox (keyup)="print($event)" placeholder="Keyup">{{abox.value}}
+<input type="text" id="box" #box1 (keydown)="print($event)" placeholder="keydown">{{box1.value}}
+<input type="text" id="box" #box2 (blur)="print($event)" placeholder="Blur">{{box2.value}}
+<input type="text" id="box" #box3 (input)="print($event)" placeholder="Input">{{box3.value}}
+
+<hr>
+<button (click)="counter('++')">++</button>
+Counter : {{count}}
+<button (click)="counter('--')">--</button>
+
+<!-- property binding vs string interpollatiopn -->
+<hr>
+<button (click)="flag=!flag" [disabled]="flag">P binding</button>  {{flag}}
+<hr>
+<button (click)="flag=!flag" disabled={{flag}}>S inerterpolatiopn </button>{{flag}} - - ->always true bcz terated as string
+<hr>
+<button (click)="flag=!flag" >Allow</button>
+
+<p *ngIf="flag ; else elseID">
+  If Condition
+</p>
+
+<ng-template #elseID>
+  else Condition
+</ng-template>
+
+<div>
+  {{color}}
+  <p *ngIf="color=='red'">Red</p>
+  <p *ngIf="color=='blue'">blue</p>
+  <p *ngIf="color=='green'">Green</p>
+</div>
+
+<!-- same using *ngSwitch and *ngSwitchCase -->
+
+
+<p [style.color]="'pink'">-----</p>
+<hr>
+<p [style.background-color]="changeColor()">+++++++</p>
+
+<mat-slide-toggle>Toggle me!</mat-slide-toggle>
+<mat-slider>
+  <input matSliderThumb>
+</mat-slider>
+<mat-slider min="0" max="100000" step="1000" showTickMarks discrete [displayWith]="formatLabel">
+  <input matSliderThumb>
+</mat-slider>
+
+<h1>To Do List</h1>
+
+<input type="text" #task > 
+<button (click)="addTask(task.value)">Add</button>
+
+<div *ngFor="let work of todolist">
+  <label >{{work.task }} {{ work.id}}</label>
+  <button (click)="removeTask(work.id)">remove</button>
+</div>
+
+<hr>  <br> <br><br>
+
+
+
+
+
+
+
+
+
